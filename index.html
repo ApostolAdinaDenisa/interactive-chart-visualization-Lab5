@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Chart Visualization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+  <div id="controls">
+    <h3>Chart Controls</h3>
+
+    <button id="toggleRun">Pause</button>
+
+    <label>
+      Update Interval (ms)
+      <input type="range" id="speed" min="100" max="2000" value="500">
+    </label>
+
+    <label>
+      Data Range
+      <input type="number" id="minVal" value="0">
+      <input type="number" id="maxVal" value="100">
+    </label>
+
+    <label>
+      <input type="checkbox" id="gridToggle" checked>
+      Show Grid
+    </label>
+
+    <label>
+      <input type="checkbox" id="smoothToggle">
+      Smooth Lines
+    </label>
+
+    <label>
+      Chart Type
+      <select id="chartType">
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+        <option value="area">Area</option>
+        <option value="scatter">Scatter</option>
+      </select>
+    </label>
+
+    <label>
+      Theme
+      <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="contrast">High Contrast</option>
+      </select>
+    </label>
+
+    <button id="reset">Reset Data</button>
+    <button id="export">Export PNG</button>
+
+    <div id="stats"></div>
+  </div>
+
+  <canvas id="chart"></canvas>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
